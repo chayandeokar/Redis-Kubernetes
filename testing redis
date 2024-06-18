@@ -1,0 +1,9 @@
+SET mykey "Hello, Redis!"
+
+# Add a hash
+HSET myhash field1 "Hello"
+HSET myhash field2 "Redis"
+
+# Add a list
+LPUSH mylist "world"
+LPUSH mylist "Hello"
