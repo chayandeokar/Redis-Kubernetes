@@ -10,6 +10,15 @@ To connect to your Redis server:
     --env REDIS_PASSWORD=$REDIS_PASSWORD \
    --image docker.io/bitnami/redis:5.0.7-debian-10-r32 -- bash
 
+
+--- > I have no name!@my-redis-client:/$ redis-cli -h 172.20.122.116 -p 6379 -a 
+--- > Warning: Using a password with '-a' or '-u' option on the command line interface may not be safe.
+# 172.20.122.116:6379> SADD myset "Hello"
+(integer) 1
+# 172.20.122.116:6379> SADD myset "world"
+(integer) 1
+
+
 2. Connect using the Redis CLI:
    redis-cli -h my-redis-master -a $REDIS_PASSWORD
    redis-cli -h my-redis-slave -a $REDIS_PASSWORD
